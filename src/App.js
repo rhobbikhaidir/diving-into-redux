@@ -7,13 +7,13 @@ import UserProfile from "./components/UserProfile";
 
 function App() {
   const isAuthed = useSelector((state) => state.auth.isAuthenticated);
-  console.log(isAuthed)
+  // console.log(isAuthed)
 
   return (
     <Fragment>
       <Header />
       {!isAuthed && <Auth />}
-     {isAuthed && <UserProfile /> } 
+      {isAuthed && <UserProfile />}
       <Counter />
     </Fragment>
   );
